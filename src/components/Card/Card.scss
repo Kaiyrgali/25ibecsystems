@@ -1,0 +1,60 @@
+.Link {
+  display: contents;
+}
+
+.Card {
+  position: relative;
+  display: inline;
+  border-radius: 4px;
+  width: 267px;
+  min-height: 290px;
+  background-color:  rgb(32, 32, 32);
+  margin: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  &-Poster {
+    width: 100%;
+    height: 150px;
+    object-fit: fill;
+  }
+  &-Info {
+    padding: 16px 16px 24px 16px;
+    background-color: inherit;
+  }
+  &-Name {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: 8px;
+    background-color: inherit;
+  }
+  &-Rating {
+    text-align: center;
+    margin-top: 3px;
+    padding: 2px;
+    background-color: green;
+    border-radius: 4px;
+    font-size: 14px;
+    // font-style: normal;
+    font-weight: 400;
+    width: 50px;
+  }
+  &-Release {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    font-weight: 400;
+    background-color: inherit;
+  }
+}
+
+.Release-Title {
+  margin-right: 6px;
+  color: grey;
+  background-color: inherit;
+}
+.Release-Date {
+  background-color: inherit;
+}
