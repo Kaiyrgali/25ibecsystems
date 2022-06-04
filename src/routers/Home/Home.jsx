@@ -23,6 +23,7 @@ function Home() {
   return (
     <div className="Home">
       <Title text={'Newest games'} />
+      <Filter />
       <div className="List">
         {list === null 
           ? null

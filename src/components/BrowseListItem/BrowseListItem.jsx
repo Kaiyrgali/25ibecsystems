@@ -22,10 +22,25 @@ function BrowseListItem({ info }) {
           <p className="Game-Name">
             {info.games[0].name}
           </p>
-          <div className="Game-Count">
+          <p className="Game-Count">
             {info.games[0].added}
-          </div>
-          {/* <img src="./user.svg" alt="" className="User" /> */}
+          </p>
+        </div>
+        <div className="BrowseCard-Game">
+          <p className="Game-Name">
+            {info.games[1].name}
+          </p>
+          <p className="Game-Count">
+            {info.games[1].added}
+          </p>
+        </div>
+        <div className="BrowseCard-Game">
+          <p className="Game-Name">
+            {info.games[2].name}
+          </p>
+          <p className="Game-Count">
+            {info.games[2].added}
+          </p>
         </div>
       </div>
     </div>
