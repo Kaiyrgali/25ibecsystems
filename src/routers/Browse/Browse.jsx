@@ -14,10 +14,10 @@ function Browse() {
 
   // разделить АПИ адрес, название запроса и ключь
 
-  const [platform, setPlatform] = useState(undefined);
-  const [genres, setGenres] = useState(undefined);
-  const [tags, setTags] = useState(undefined);
-  const [creators, setCreators] = useState(undefined);
+  const [platform, setPlatform] = useState(false);
+  const [genres, setGenres] = useState(false);
+  const [tags, setTags] = useState(false);
+  const [creators, setCreators] = useState(false);
 
   useEffect(() => {
     fetch(platformUrl)

@@ -1,0 +1,13 @@
+@import '../../style/colors.scss';
+
+.FilterItem-Text {
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px 16px;
+  &:hover {
+    background-color: $grey;
+  }
+}
