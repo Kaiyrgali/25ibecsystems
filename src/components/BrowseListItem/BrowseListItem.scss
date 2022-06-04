@@ -1,0 +1,68 @@
+@import '../../style/colors.scss';
+
+.BrowseCard-Wrap {
+  width: 305px;
+  height: 320px;
+  border-radius: 4px;
+  background-size: cover;
+}
+
+.BrowseCard {
+  margin: 32px 24px;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 1px solid $grey;
+  background-color: opacity 0;
+  &-Name {
+    background-color: inherit;
+    margin: 16px auto;
+    &:hover {
+      color: $grey;
+    }
+  }
+}
+
+.BrowseCard-Popular {
+
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  border-bottom: 1px solid $grey;
+}
+
+.Popular-Title {
+  font-size: 16px;
+  font-weight: 700;
+  &:hover {
+    color: $grey;
+  }
+}
+
+.Popular-Count {
+  font-size: 14px;
+  font-weight: 400;
+  color: $grey;
+}
+
+.BrowseCard-Game {
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Game-Name {
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid $grey;
+  &:hover {
+    color: $grey;
+  }
+}
+
+.Game-Count {
+  font-size: 14px;
+  font-weight: 400;
+  // padding-right: 12px;
+  color: $grey;
+}

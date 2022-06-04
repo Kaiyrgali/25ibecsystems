@@ -1,0 +1,289 @@
+PLATFORMS 
+{
+    "count": 51,
+    "next": "https://api.rawg.io/api/platforms?key=4b8f23359f464857b5bfdea7a6e306aa&page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 4,
+            "name": "PC",
+            "slug": "pc",
+            "games_count": 447803,
+            "image_background": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
+            "image": null,
+            "year_start": null,
+            "year_end": null,
+            "games": [
+                {
+                    "id": 3498,
+                    "slug": "grand-theft-auto-v",
+                    "name": "Grand Theft Auto V",
+                    "added": 17433
+                },
+                {
+                    "id": 3328,
+                    "slug": "the-witcher-3-wild-hunt",
+                    "name": "The Witcher 3: Wild Hunt",
+                    "added": 16182
+                },
+                {
+                    "id": 4200,
+                    "slug": "portal-2",
+                    "name": "Portal 2",
+                    "added": 15255
+                },
+
+
+gENRES{
+    "count": 19,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 4,
+            "name": "Action",
+            "slug": "action",
+            "games_count": 151535,
+            "image_background": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
+            "games": [
+                {
+                    "id": 3498,
+                    "slug": "grand-theft-auto-v",
+                    "name": "Grand Theft Auto V",
+                    "added": 17433
+                },
+                {
+                    "id": 3328,
+                    "slug": "the-witcher-3-wild-hunt",
+                    "name": "The Witcher 3: Wild Hunt",
+                    "added": 16182
+                },
+                {
+                    "id": 5286,
+                    "slug": "tomb-raider",
+                    "name": "Tomb Raider (2013)",
+                    "added": 13656
+                },
+
+tags
+{
+    "count": 8664,
+    "next": "https://api.rawg.io/api/tags?key=4b8f23359f464857b5bfdea7a6e306aa&page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 31,
+            "name": "Singleplayer",
+            "slug": "singleplayer",
+            "games_count": 166002,
+            "image_background": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg",
+            "language": "eng",
+            "games": [
+                {
+                    "id": 3498,
+                    "slug": "grand-theft-auto-v",
+                    "name": "Grand Theft Auto V",
+                    "added": 17433
+                },
+                {
+                    "id": 3328,
+                    "slug": "the-witcher-3-wild-hunt",
+                    "name": "The Witcher 3: Wild Hunt",
+                    "added": 16182
+                },
+                {
+                    "id": 4200,
+                    "slug": "portal-2",
+                    "name": "Portal 2",
+                    "added": 15255
+                },
+                {
+                    "id": 5286,
+                    "slug": "tomb-raider",
+                    "name": "Tomb Raider (2013)",
+                    "added": 13656
+                },
+                {
+                    "id": 5679,
+                    "slug": "the-elder-scrolls-v-skyrim",
+                    "name": "The Elder Scrolls V: Skyrim",
+                    "added": 13228
+                },
+                {
+                    "id": 12020,
+                    "slug": "left-4-dead-2",
+                    "name": "Left 4 Dead 2",
+                    "added": 13015
+                }
+            ]
+        },
+        {
+            "id": 40847,
+            "name": "Steam Achievements",
+            "slug": "steam-achievements",
+            "games_count": 26008,
+            "image_background": "https://media.rawg.io/media/games/9dd/9ddabb34840ea9227556670606cf8ea3.jpg",
+            "language": "eng",
+            "games": [
+                {
+                    "id": 3498,
+                    "slug": "grand-theft-auto-v",
+                    "name": "Grand Theft Auto V",
+                    "added": 17433
+                },
+                {
+                    "id": 4200,
+                    "slug": "portal-2",
+                    "name": "Portal 2",
+                    "added": 15255
+                },
+                {
+                    "id": 5679,
+                    "slug": "the-elder-scrolls-v-skyrim",
+                    "name": "The Elder Scrolls V: Skyrim",
+                    "added": 13228
+                },
+                {
+                    "id": 4291,
+                    "slug": "counter-strike-global-offensive",
+                    "name": "Counter-Strike: Global Offensive",
+                    "added": 13152
+                },
+                {
+                    "id": 12020,
+                    "slug": "left-4-dead-2",
+                    "name": "Left 4 Dead 2",
+                    "added": 13015
+                },
+                {
+                    "id": 13536,
+                    "slug": "portal",
+                    "name": "Portal",
+                    "added": 12909
+                }
+            ]
+        },
+
+Creators
+{
+    "count": 25744,
+    "next": "https://api.rawg.io/api/creators?key=4b8f23359f464857b5bfdea7a6e306aa&page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 31,
+            "name": "Gabe Newell",
+            "slug": "gabe-newell",
+            "image": "https://media.rawg.io/media/persons/5e5/5e5e064d3475fc3fe49d1d2debb4e36c.jpg",
+            "image_background": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+            "games_count": 24,
+            "positions": [
+                {
+                    "id": 2,
+                    "name": "director",
+                    "slug": "director"
+                },
+                {
+                    "id": 5,
+                    "name": "producer",
+                    "slug": "producer"
+                },
+                {
+                    "id": 7,
+                    "name": "programmer",
+                    "slug": "programmer"
+                }
+            ],
+            "games": [
+                {
+                    "id": 4200,
+                    "slug": "portal-2",
+                    "name": "Portal 2",
+                    "added": 15255
+                },
+                {
+                    "id": 4291,
+                    "slug": "counter-strike-global-offensive",
+                    "name": "Counter-Strike: Global Offensive",
+                    "added": 13152
+                },
+                {
+                    "id": 12020,
+                    "slug": "left-4-dead-2",
+                    "name": "Left 4 Dead 2",
+                    "added": 13015
+                },
+                {
+                    "id": 13536,
+                    "slug": "portal",
+                    "name": "Portal",
+                    "added": 12909
+                },
+                {
+                    "id": 13537,
+                    "slug": "half-life-2",
+                    "name": "Half-Life 2",
+                    "added": 11677
+                },
+                {
+                    "id": 19710,
+                    "slug": "half-life-2-episode-one",
+                    "name": "Half-Life 2: Episode One",
+                    "added": 8795
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "name": "Marc Laidlaw",
+            "slug": "marc-laidlaw",
+            "image": "https://media.rawg.io/media/persons/da3/da3fc907a3af9e494dc671b0c6348f5c.jpg",
+            "image_background": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+            "games_count": 15,
+            "positions": [
+                {
+                    "id": 1,
+                    "name": "writer",
+                    "slug": "writer"
+                }
+            ],
+            "games": [
+                {
+                    "id": 4200,
+                    "slug": "portal-2",
+                    "name": "Portal 2",
+                    "added": 15255
+                },
+                {
+                    "id": 4291,
+                    "slug": "counter-strike-global-offensive",
+                    "name": "Counter-Strike: Global Offensive",
+                    "added": 13152
+                },
+                {
+                    "id": 12020,
+                    "slug": "left-4-dead-2",
+                    "name": "Left 4 Dead 2",
+                    "added": 13015
+                },
+                {
+                    "id": 13536,
+                    "slug": "portal",
+                    "name": "Portal",
+                    "added": 12909
+                },
+                {
+                    "id": 13537,
+                    "slug": "half-life-2",
+                    "name": "Half-Life 2",
+                    "added": 11677
+                },
+                {
+                    "id": 10213,
+                    "slug": "dota-2",
+                    "name": "Dota 2",
+                    "added": 9933
+                }
+            ]
+        },
+

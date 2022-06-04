@@ -1,0 +1,31 @@
+@import '../../style/colors.scss';
+
+.BrowseList-Heading {
+  display: flex;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.Heading-Topic {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  border-bottom: 1px solid hsla(0,0%,100%,.16);
+  margin-right: 8px;
+  &:hover {
+    color: $grey;
+  }
+}
+
+.Heading-Count {
+  font-size: 24px;
+  font-weight: 400;
+  color: $grey;
+  margin-right: 8px;
+}
+
+.Heading-Arrow {
+  width: 9px;
+  height: 20px;
+  margin-top: 4px;
+}

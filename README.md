@@ -12,6 +12,8 @@ Original Task text - https://digitalspectrbook.notion.site/frontend-ReactJS-VueJ
 - БЭМ на рейтинг и другие повторяющиеся детали
 - Подобрать Спинер
 - Развить на мелкие компоненты, например скрин вывести в отдельный компонент, рейтинг
+- Убрать со страницы Броузер фетчинг в Сагу
+
 
 
 https://api.rawg.io/docs/#operation/games_read

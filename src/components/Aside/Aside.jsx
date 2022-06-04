@@ -8,7 +8,7 @@ function Aside() {
       <Link to="/" className="Aside-Title">
         home
       </Link>
-      <Link to="/games" className="Aside-Title">
+      <Link to="/browse" className="Aside-Title">
         browse
       </Link>
     </div>

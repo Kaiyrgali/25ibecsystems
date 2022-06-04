@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Title from '../../components/Title/Title';
 import Card from '../../components/Card/Card';
 import { getElements } from '../../units/getElements';
 import './Home.scss';
@@ -21,9 +22,7 @@ function Home() {
   
   return (
     <div className="Home">
-      <h1 className="Title">
-        Newest games
-      </h1>
+      <Title text={'Newest games'} />
       <div className="List">
         {list === null 
           ? null
