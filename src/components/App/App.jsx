@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import ErrorBoundary from '../ErrorBoundary';
 import Aside from '../Aside';
@@ -8,15 +8,15 @@ import Home from '../../routers/Home';
 import Browse from '../../routers/Browse';
 import Details from '../../routers/Details';
 import NotFound from '../../routers/NotFound';
-// import store from '../../redux/store';
+import store from '../../redux/store';
 import './App.scss';
 
 function App() {
     
 
   return (
-    // <Provider store={store}>
-    //   <ErrorBoundary>
+    <Provider store={store}>
+     {/* <ErrorBoundary> */}
         <Router>
           <Header />
           <div className="Container">
@@ -29,8 +29,8 @@ function App() {
             </Routes>
           </div>
          </Router>
-    //   </ErrorBoundary>
-    // </Provider>
+      {/* </ErrorBoundary> */}
+    </Provider>
   );
 }
 

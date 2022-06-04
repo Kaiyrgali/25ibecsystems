@@ -1,7 +1,10 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './Header.scss';
 
 function Header() {
+  const store = useSelector((store) => store);
+  const dispatch = useDispatch();
 
   return (
     <div className="Header">
@@ -12,8 +15,9 @@ function Header() {
         placeholder={'Search games'}
         role="searchbox"
         onInput={(e) => {
-          console.log(e.target.value)
-          // onSearch(e.target.value);
+          const action = e.target.value;
+          // console.log(action)
+          dispatch({ type: 'ADD_SEARCH_TEXT', action });
         }}
         />
     </div>

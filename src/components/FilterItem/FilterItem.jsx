@@ -1,11 +1,16 @@
 import React from 'react';
+
 import './FilterItem.scss';
 
-function FilterItem({ platform }) {
-  console.log(platform);
+function FilterItem({ value, type, onDispatch }) {
+
+  // console.log(platform);
   return (
-    <p className="FilterItem-Text">
-      {platform}
+    <p
+      className="FilterItem-Text"
+      onClick={() => onDispatch(type, value)}
+    >
+      {value}
     </p>  
   );
 }

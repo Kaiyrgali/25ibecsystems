@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import FilterItem from '../FilterItem/FilterItem';
 import './Filter.scss';
 
@@ -16,13 +17,31 @@ function Filter() {
   const [platformsList, setPlatformsList] = useState(false);
 
   useEffect(() => {
+    console.log('<<< Fetched platforms for filters >>>');
     fetch(platformUrl)
       .then(res => res.json())
       .then(data => setPlatformsList(data))
   }, []);
 
+  const dispatch = useDispatch();
+  // const setRating = (action) => {
+  //   dispatch({ type: 'ADD_FILTER_RATING', action })
+  //   setShowPlatforms(false)
+  // };
+  // const setRelease = (action) => {
+  //   dispatch({ type: 'ADD_FILTER_RELEASE', action })
+  //   setShowPlatforms(false)
+  // };
+  const onDispatch = (type, action) => {
+    dispatch({ type, action })
+    setShowRating(false)
+    setShowRelease(false)
+    setShowPlatforms(false)
+  };
+
+
   if ( !platformsList ) return null;
-console.log(platformsList.results)
+// console.log(platformsList.results)
   return (
     <div className="Filter">
       <div className="Dropdown">
@@ -38,13 +57,25 @@ console.log(platformsList.results)
             <img src="./arrow.svg" alt="Arrow" className="Btn-Arrow" />
           </div>
         </button>
-        <div className="Filter-Select Filter-Select_Rating" style={ratingStyle}>
-          <p className="Filter-Text">
+        <div
+          className="Filter-Select Filter-Select_Rating"
+          style={ratingStyle}
+          onMouseLeave={()=>setShowRating(false)}
+        >
+          {['Ascending', 'Descending'].map((item) => 
+            <FilterItem
+              key={item}
+              value={item}
+              type={'ADD_FILTER_RATING'}
+              onDispatch={onDispatch}
+            />  
+          )}
+          {/* <p className="Filter-Text">
             Ascending
           </p>
           <p className="Filter-Text">
             Descending
-          </p>
+          </p> */}
         </div>
 
       </div>
@@ -52,7 +83,7 @@ console.log(platformsList.results)
         <button
           className="Dropdown-Btn Dropdown-Btn_Release"
           type="button"
-          onClick={()=>setShowRelease((prev) => !prev)}
+          onClick={()=>setShowRelease(true)}
         >
           <div className="Btn-Content">
             <div className="Btn-Title">
@@ -61,20 +92,32 @@ console.log(platformsList.results)
             <img src="./arrow.svg" alt="Arrow" className="Btn-Arrow" />
           </div>
         </button>
-        <div className="Filter-Select Filter-Select_Release" style={releaseStyle}>
-          <p className="Filter-Text">
+        <div
+          className="Filter-Select Filter-Select_Release"
+          style={releaseStyle}
+          onMouseLeave={()=>setShowRelease(false)}
+        >
+          {['Ascending', 'Descending'].map((item) => 
+            <FilterItem
+              key={item}
+              value={item}
+              type={'ADD_FILTER_RELEASE'}
+              onDispatch={onDispatch}
+            />  
+          )}
+          {/* <p className="Filter-Text">
             Ascending
           </p>
           <p className="Filter-Text">
             Descending
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="Dropdown">
         <button
           className="Dropdown-Btn Dropdown-Btn_Platforms"
           type="button"
-          onClick={()=>setShowPlatforms((prev) => !prev)}
+          onClick={()=>setShowPlatforms(true)}
         >
           <div className="Btn-Content">
             <div className="Btn-Title">
@@ -83,13 +126,19 @@ console.log(platformsList.results)
             <img src="./arrow.svg" alt="Arrow" className="Btn-Arrow" />
           </div>
         </button>
-        <div className="Filter-Select Filter-Select_Platforms" style={platformsStyle}>
-          {platformsList.results.map((platform) => 
-            <FilterItem
-              key={platform.id}
-              platform={platform.name}
-            />  
-          )}
+        <div
+          className="Filter-Select Filter-Select_Platforms"
+          style={platformsStyle}
+          onMouseLeave={()=>setShowPlatforms(false)}
+        >
+            {platformsList.results.map((item) => 
+              <FilterItem
+                key={item.id}
+                value={item.name}
+                type={'ADD_FILTER_PLATFORM'}
+                onDispatch={onDispatch}
+              />  
+            )}
         </div>
       </div>
     </div>
