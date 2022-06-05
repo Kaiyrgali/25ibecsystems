@@ -1,6 +1,6 @@
 import getSearch from './getSearch';
-import getRating from './getRating';
-import getRelease from './getRelease';
+import getSort from './getSort';
+// import getRelease from './getRelease';
 import getPlatform from './getPlatform';
 
 const reducer = (state, action) => {
@@ -8,8 +8,8 @@ const reducer = (state, action) => {
   return (
     {
       search: getSearch(state, action),
-      rating: getRating(state, action),
-      release: getRelease(state, action),
+      sort: getSort(state, action),
+      // release: getRelease(state, action),
       platform: getPlatform(state, action),
     }
   );

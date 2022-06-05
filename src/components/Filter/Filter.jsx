@@ -52,7 +52,7 @@ function Filter() {
         >
           <div className="Btn-Content">
             <div className="Btn-Title">
-            Sort by Rating
+            Sort by: 
             </div>
             <img src="./arrow.svg" alt="Arrow" className="Btn-Arrow" />
           </div>
@@ -62,24 +62,18 @@ function Filter() {
           style={ratingStyle}
           onMouseLeave={()=>setShowRating(false)}
         >
-          {['Ascending', 'Descending'].map((item) => 
+          {['Rating Ascending', 'Rating Descending', 'Release Ascending','Release Descending'].map((item) => 
             <FilterItem
               key={item}
               value={item}
-              type={'ADD_FILTER_RATING'}
+              type={'ADD_FILTER'}
               onDispatch={onDispatch}
             />  
           )}
-          {/* <p className="Filter-Text">
-            Ascending
-          </p>
-          <p className="Filter-Text">
-            Descending
-          </p> */}
         </div>
 
       </div>
-      <div className="Dropdown">
+      {/* <div className="Dropdown">
         <button
           className="Dropdown-Btn Dropdown-Btn_Release"
           type="button"
@@ -104,15 +98,15 @@ function Filter() {
               type={'ADD_FILTER_RELEASE'}
               onDispatch={onDispatch}
             />  
-          )}
+          )} */}
           {/* <p className="Filter-Text">
             Ascending
           </p>
           <p className="Filter-Text">
             Descending
           </p> */}
-        </div>
-      </div>
+        {/* </div> */}
+      {/* </div> */}
       <div className="Dropdown">
         <button
           className="Dropdown-Btn Dropdown-Btn_Platforms"
