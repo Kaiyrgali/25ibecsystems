@@ -28,21 +28,12 @@ function Home() {
       })
   }, [refresh]);
 
-
   useEffect(() => {
     document.addEventListener('scroll' ,scrollHandler)
     return function() {
       document.addEventListener('scroll',scrollHandler)
     }
   }, [])
-
-  const scrollHandler = (e) => {
-    if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && maxPage === page) {
-      console.log('scroll ...')
-      setRefresh((prev) => !prev);
-    }
-  }
-
 
   useEffect(() => {
     if (list.length) {
@@ -53,6 +44,12 @@ function Home() {
     }
   }, [store.search]);
 
+  const scrollHandler = (e) => {
+    if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && maxPage === page) {
+      console.log('scroll ...')
+      setRefresh((prev) => !prev);
+    }
+  }
 
   if (store.sort === 'Rating Ascending') {
     newList.sort((a,b) => {
@@ -91,13 +88,9 @@ function Home() {
     }
   }, [store.platform]);
  
-
-
-
-useEffect(() => {
-  console.log('change listSort >>')
-  setNewList(newList)
-}, [newList])
+  useEffect(() => {
+    setNewList(newList)
+  }, [newList])
 
 
   return (
@@ -115,7 +108,7 @@ useEffect(() => {
         )}
       </div>
     </div>
-  )
+  );
 }
 
 export default Home;

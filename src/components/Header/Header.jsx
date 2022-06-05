@@ -16,11 +16,9 @@ function Header() {
         role="searchbox"
         onInput={(e) => {
           const action = e.target.value;
-          // console.log(action)
           dispatch({ type: 'ADD_SEARCH_TEXT', action });
         }}
-        />
-      {/* <img className="Burger" src='../burger.svg' alt='Menu' /> */}
+      />
     </div>
   )
 }

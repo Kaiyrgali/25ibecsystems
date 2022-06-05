@@ -8,10 +8,8 @@ const key= '?key=4b8f23359f464857b5bfdea7a6e306aa';
 
 function Filter() {
   const platformUrl = `${url}platforms/lists/parents${key}`;
-  const [showRating, setShowRating] = useState(false);
-  const ratingStyle = showRating ? {display: 'block'} : {display: 'none'};
-  const [showPlatforms, setShowPlatforms] = useState(false);
-  const platformsStyle = showPlatforms ? {display: 'block'} : {display: 'none'};
+  const [showRating, setShowRating] = useState({display: 'none'});
+  const [showPlatforms, setShowPlatforms] = useState({display: 'none'});
   const [platformsList, setPlatformsList] = useState(false);
 
   useEffect(() => {
@@ -24,9 +22,8 @@ function Filter() {
   const dispatch = useDispatch();
   const onDispatch = (type, action) => {
     dispatch({ type, action })
-    setShowRating(false)
-    setShowRelease(false)
-    setShowPlatforms(false)
+    setShowRating({display: 'none'})
+    setShowPlatforms({display: 'none'})
   };
 
   if ( !platformsList ) return null;
@@ -37,7 +34,7 @@ function Filter() {
         <button
           className="Dropdown-Btn Dropdown-Btn_Rating"
           type="button"
-          onClick={()=>setShowRating((prev) => !prev)}
+          onClick={()=>setShowRating({display: 'block'})}
         >
           <div className="Btn-Content">
             <div className="Btn-Title">
@@ -48,8 +45,8 @@ function Filter() {
         </button>
         <div
           className="Filter-Select Filter-Select_Rating"
-          style={ratingStyle}
-          onMouseLeave={()=>setShowRating(false)}
+          style={showRating}
+          onMouseLeave={()=>setShowRating({display: 'none'})}
         >
           {['Rating Ascending', 'Rating Descending', 'Release Ascending','Release Descending'].map((item) => 
             <FilterItem
@@ -66,7 +63,7 @@ function Filter() {
         <button
           className="Dropdown-Btn Dropdown-Btn_Platforms"
           type="button"
-          onClick={()=>setShowPlatforms(true)}
+          onClick={()=>setShowPlatforms({display: 'block'})}
         >
           <div className="Btn-Content">
             <div className="Btn-Title">
@@ -77,8 +74,8 @@ function Filter() {
         </button>
         <div
           className="Filter-Select Filter-Select_Platforms"
-          style={platformsStyle}
-          onMouseLeave={()=>setShowPlatforms(false)}
+          style={showPlatforms}
+          onMouseLeave={()=>setShowPlatforms({display: 'none'})}
         >
             {platformsList.results.map((item) => 
               <FilterItem
@@ -91,7 +88,7 @@ function Filter() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default Filter;
 
+export default Filter;

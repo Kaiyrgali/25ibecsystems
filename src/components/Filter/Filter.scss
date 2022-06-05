@@ -3,15 +3,10 @@
 .Filter {
   margin-left: 12px;
   text-align: left;
-  // margin-bottom: 32px;
   display: flex;
   gap: 15px;
   cursor: pointer;
   height: 100px;
-}
-
-.Dropdown {
-  // position: relative;
 }
 
 .Dropdown-Btn {
@@ -25,16 +20,12 @@
   &_Rating {
     width: 150px;
   }
-  &_Release {
-    width: 200px;
-  }
   &_Platforms {
     width: 120px;
   }
 }
 
 .Btn-Content {
-  // overflow: hidden;
   display: flex;
   background-color: transparent;
 }
@@ -67,13 +58,9 @@
   margin-top: -46px;
   position: absolute;
   width: 100%;
-  // width: inherit;
   border-radius: 8px;
   &_Rating {
     width: 150px;
-  }
-  &_Release {
-    width: 200px;
   }
   &_Platforms {
     width: 120px;

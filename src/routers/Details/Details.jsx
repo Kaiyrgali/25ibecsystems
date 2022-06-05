@@ -9,7 +9,6 @@ function Details() {
   const gameUrl = `https://api.rawg.io/api/games/${prodId}?key=4b8f23359f464857b5bfdea7a6e306aa`;
   const screenUrl = `https://api.rawg.io/api/games/${prodId}/screenshots?key=4b8f23359f464857b5bfdea7a6e306aa`;
   const pagePath = `home / game / ${prodId}`
-  const [refresh, setRefresh] = useState(false);
   const [game, setGame] = useState(false);
   const [screenshots, setScreenshots] = useState(false);
   const [isMore, setIsMore] = useState(true);
@@ -19,24 +18,13 @@ function Details() {
 
   useEffect(() => {
     fetch(gameUrl)
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        setGame(data);
-        console.log(data);
-      })
+      .then(res => res.json())
+      .then(data => setGame(data))
     fetch(screenUrl)
-    .then(res => {
-      return res.json();
-    })
-    .then(data => {
-      setScreenshots(data);
-      console.log(data);
-    })
-  }, [refresh]);
+      .then(res => res.json())
+      .then(data => setScreenshots(data))
+  }, []);
 
-  console.log(!game, !screenshots)
   if (!game || !screenshots) return null;
 
   return (
@@ -110,7 +98,7 @@ function Details() {
 
       </div>
     </div>
-  )
+  );
 }
 
 export default Details;

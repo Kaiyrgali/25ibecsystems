@@ -1,6 +1,5 @@
 import getSearch from './getSearch';
 import getSort from './getSort';
-// import getRelease from './getRelease';
 import getPlatform from './getPlatform';
 
 const reducer = (state, action) => {
@@ -9,10 +8,9 @@ const reducer = (state, action) => {
     {
       search: getSearch(state, action),
       sort: getSort(state, action),
-      // release: getRelease(state, action),
       platform: getPlatform(state, action),
     }
   );
-};
+}
 
 export default reducer;

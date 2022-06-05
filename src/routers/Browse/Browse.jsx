@@ -11,9 +11,6 @@ function Browse() {
   const genresUrl = `${url}genres${key}`;
   const tagsUrl = `${url}tags${key}`;
   const creatorsUrl = `${url}creators${key}`;
-
-  // разделить АПИ адрес, название запроса и ключь
-
   const [platform, setPlatform] = useState(false);
   const [genres, setGenres] = useState(false);
   const [tags, setTags] = useState(false);
@@ -35,7 +32,7 @@ function Browse() {
   }, []);
 
   if (!platform || !genres || !tags || !creators) return null;
-  // console.log(platform)
+
   return (
     <div className="Browse">
       <Title text={'Browse'} />
@@ -44,8 +41,7 @@ function Browse() {
       <BrowseList topic={'tags'} data={tags}/>
       <BrowseList topic={'creators'} data={creators}/>
     </div>
-  )
+  );
 }
 
 export default Browse;
-
