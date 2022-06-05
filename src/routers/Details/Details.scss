@@ -6,7 +6,7 @@
 }
 .PagePath {
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 400;
   color: $grey;
   margin-bottom: 32px;
@@ -20,8 +20,6 @@
 
 .Details-Gallery {
   display: inline-flex;
-  // align-items: center;
-  // vertical-align: middle;
 }
 
 .Gallery-Picture {
@@ -42,19 +40,34 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  // -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
 .Description-ShowButton {
-  // display: inline-flex;
+  margin-top: 3px;
   width: max-content;
   font-size: 12px;
   font-weight: 400;
-  padding: 0 5px;
+  padding: 3px 5px;
   border-radius: 2px;
   border: none;
   color: black;
   background-color: white;
   cursor: pointer;
+}
+
+.Card-Release {
+  width: 340px;
+}
+
+.More {
+  width: 340px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Web:hover {
+  color: $grey;
 }

@@ -4,7 +4,7 @@ import './BrowseList.scss';
 
 function BrowseList({ topic, data }) {
   return (
-    <div>
+    <div className="BrowseList">
       <div className="BrowseList-Heading">
         <h2 className="Heading-Topic">{topic}</h2>
         <span className="Heading-Count">{data.count}</span>

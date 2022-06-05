@@ -9,4 +9,3 @@ function Title({ text }) {
   );
 }
 export default Title;
-

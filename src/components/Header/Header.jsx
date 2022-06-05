@@ -1,18 +1,17 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './Header.scss';
 
 function Header() {
-  const store = useSelector((store) => store);
   const dispatch = useDispatch();
 
   return (
     <div className="Header">
-      <img className="Logo" src='../logo.svg' alt='Logo' />
+      <img className="Logo" src="../logo.svg" alt="Logo" />
       <input
         type="text"
         className="Search"
-        placeholder={'Search games'}
+        placeholder="Search games"
         role="searchbox"
         onInput={(e) => {
           const action = e.target.value;
@@ -20,7 +19,7 @@ function Header() {
         }}
       />
     </div>
-  )
+  );
 }
 
 export default Header;

@@ -9,9 +9,8 @@ function FilterItem({ value, type, onDispatch }) {
       onClick={() => onDispatch(type, value)}
     >
       {value}
-    </p>  
+    </p>
   );
 }
 
 export default FilterItem;
-

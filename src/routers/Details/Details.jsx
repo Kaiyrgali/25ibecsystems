@@ -15,7 +15,7 @@ function Details() {
   const [isMore, setIsMore] = useState(true);
   const [activePicture, setPicture] = useState(0);
   const styleBtn = isMore ? null : 'block';
-  const descriptionHeight = isMore ? { WebkitLineClamp: 4 } : null;
+  const descriptionHeight = isMore ? { WebkitLineClamp: 3 } : null;
 
   useEffect(() => {
     fetch(gameUrl)
@@ -73,15 +73,14 @@ function Details() {
         <span className="Description-Text" style={descriptionHeight}>
           {game.description_raw}
         </span>
-        <span
+        <button
           className="Description-ShowButton"
-          role="button"
-          tabIndex={0}
+          type="button"
           style={{ display: styleBtn }}
           onClick={() => setIsMore((prev) => !prev)}
         >
           {isMore ? 'Read more' : 'Show less'}
-        </span>
+        </button>
       </div>
       <div className="Details-Info">
         <div className="Card-Release">
