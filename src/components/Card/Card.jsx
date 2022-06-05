@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import getDateFormat from '../../units/getDateFormat/getDateFormat';
 import './Card.scss';
 
 function Card({ game }) {
-  const url=`/games/${game.slug}`
+  const url = `/games/${game.slug}`;
+
   return (
     <Link to={url} className="Link">
       <div className="Card">
         <img
-          className='Card-Poster'
+          className="Card-Poster"
           src={game.background_image}
           alt="poster"
         />
@@ -17,20 +19,20 @@ function Card({ game }) {
             {game.name}
           </h4>
           <p className="Card-Rating">
-          {game.rating}
+            {game.rating}
           </p>
           <div className="Card-Release">
-            <p className='Release-Title'>
+            <p className="Release-Title">
               Release date:
             </p>
-            <p className='Release-Date'>
-            {game.released}
+            <p className="Release-Date">
+              {getDateFormat(game.released)}
             </p>
           </div>
         </div>
       </div>
     </Link>
-  )
+  );
 }
 
 export default Card;

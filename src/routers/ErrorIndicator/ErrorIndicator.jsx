@@ -1,9 +1,10 @@
 import React from 'react';
+import './ErrorIndicator.scss';
 
-function ErrorIndicator({error}) {
+function ErrorIndicator() {
   return (
-    <div>
-      <img src="./error.jpg" alt="Page not Found" className="Error" />
+    <div className="Error">
+      <img src="./error.jpg" alt="Page not Found" />
     </div>
   );
 }

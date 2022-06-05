@@ -12,7 +12,7 @@ function Aside() {
         browse
       </Link>
     </div>
-  )
+  );
 }
 
 export default Aside;

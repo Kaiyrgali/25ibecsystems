@@ -7,7 +7,7 @@ function BrowseList({ topic, data }) {
     <div>
       <div className="BrowseList-Heading">
         <h2 className="Heading-Topic">{topic}</h2>
-        <span className='Heading-Count'>{data.count}</span>
+        <span className="Heading-Count">{data.count}</span>
         <img src="./arrow.svg" alt="arrow" className="Heading-Arrow" />
       </div>
       <div className="BrowserList-Items">
@@ -18,7 +18,7 @@ function BrowseList({ topic, data }) {
         <BrowseListItem key={data.results[4].id} info={data.results[5]} />
       </div>
     </div>
-  )
+  );
 }
-export default BrowseList;
 
+export default BrowseList;

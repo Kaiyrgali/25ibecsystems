@@ -17,7 +17,7 @@
   padding: 10px 16px;
   border: none;
   cursor: pointer;
-  &_Rating {
+  &_Sort {
     width: 150px;
   }
   &_Platforms {
@@ -28,6 +28,7 @@
 .Btn-Content {
   display: flex;
   background-color: transparent;
+  overflow: hidden;
 }
 
 .Btn-Title {
@@ -59,7 +60,7 @@
   position: absolute;
   width: 100%;
   border-radius: 8px;
-  &_Rating {
+  &_Sort {
     width: 150px;
   }
   &_Platforms {

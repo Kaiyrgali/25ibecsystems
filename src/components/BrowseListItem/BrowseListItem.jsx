@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './BrowseListItem.scss';
 
 function BrowseListItem({ info }) {
-  const BrowseCardBackground = {backgroundImage: `linear-gradient(rgba(32, 32, 32, 0.5), rgb(32, 32, 32) 70%), url(${info.image_background})`};
-  
+  const BrowseCardBackground = { backgroundImage: `linear-gradient(rgba(32, 32, 32, 0.5), rgb(32, 32, 32) 70%), url(${info.image_background})` };
+
   return (
     <div className="BrowseCard-Wrap" style={BrowseCardBackground}>
       <div className="BrowseCard">

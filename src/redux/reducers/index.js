@@ -11,6 +11,6 @@ const reducer = (state, action) => {
       platform: getPlatform(state, action),
     }
   );
-}
+};
 
 export default reducer;
