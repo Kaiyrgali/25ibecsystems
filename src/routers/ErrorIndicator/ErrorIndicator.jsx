@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ErrorIndicator() {
+function ErrorIndicator({error}) {
   return (
     <div>
-      Something went wrong !
+      <img src="./error.jpg" alt="Page not Found" className="Error" />
     </div>
   );
 }

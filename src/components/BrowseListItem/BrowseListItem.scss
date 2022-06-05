@@ -9,10 +9,8 @@
 
 .BrowseCard {
   margin: 32px 24px;
-  // height: 100%;
   font-size: 24px;
   font-weight: 700;
-  // border-bottom: 1px solid $grey;
   background-color: transparent;
   &-Name {
     text-align: center;
@@ -27,7 +25,6 @@
 .BrowseCard-Popular {
   margin-top: 100px;
   background-color: inherit;
-  // margin-top: 30px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 3px;
@@ -53,10 +50,10 @@
 .BrowseCard-Game {
   margin-top: 10px;
   background-color: inherit;
-  // margin-bottom: 6px;
   display: flex;
   justify-content: space-between;
   border: none;
+  background-color: transparent;
 }
 
 .Game-Name {
@@ -73,6 +70,5 @@
   background-color: inherit;
   font-size: 14px;
   font-weight: 400;
-  // padding-right: 12px;
   color: $grey;
 }

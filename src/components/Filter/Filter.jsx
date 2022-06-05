@@ -10,8 +10,6 @@ function Filter() {
   const platformUrl = `${url}platforms/lists/parents${key}`;
   const [showRating, setShowRating] = useState(false);
   const ratingStyle = showRating ? {display: 'block'} : {display: 'none'};
-  const [showRelease, setShowRelease] = useState(false);
-  const releaseStyle = showRelease ? {display: 'block'} : {display: 'none'};
   const [showPlatforms, setShowPlatforms] = useState(false);
   const platformsStyle = showPlatforms ? {display: 'block'} : {display: 'none'};
   const [platformsList, setPlatformsList] = useState(false);

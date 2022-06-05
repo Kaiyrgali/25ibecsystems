@@ -3,9 +3,6 @@ import BrowseListItem from '../BrowseListItem/BrowseListItem';
 import './BrowseList.scss';
 
 function BrowseList({ topic, data }) {
-  console.log('Theme >', data)
-  // if (data === false) return null;
-
   return (
     <div>
       <div className="BrowseList-Heading">

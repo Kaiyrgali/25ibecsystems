@@ -2,6 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import ErrorBoundary from '../ErrorBoundary';
+import { ErrorBoundary } from 'react-error-boundary';
+import ErrorIndicator from '../../routers/ErrorIndicator/ErrorIndicator';
 import Aside from '../Aside';
 import Header from '../Header/Header';
 import Home from '../../routers/Home';
@@ -16,7 +18,7 @@ function App() {
 
   return (
     <Provider store={store}>
-     {/* <ErrorBoundary> */}
+     <ErrorBoundary FallbackComponent={<ErrorIndicator />}>
         <Router>
           <Header />
           <div className="Container">
@@ -29,7 +31,7 @@ function App() {
             </Routes>
           </div>
          </Router>
-      {/* </ErrorBoundary> */}
+      </ErrorBoundary>
     </Provider>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Title from '../../components/Title/Title';
 import Filter from '../../components/Filter/Filter';
 import Card from '../../components/Card/Card';
@@ -14,7 +14,6 @@ function Home() {
   const [maxPage, setMaxPage] = useState(1)
   const [newList, setNewList] = useState(false);
 
-  
   useEffect(() => {
     fetch(`https://api.rawg.io/api/games?key=4b8f23359f464857b5bfdea7a6e306aa&page=${page}`)
       .then(res => {
@@ -27,7 +26,6 @@ function Home() {
         setNewList([...list, ...games] );
         setPage((prev) => prev+1)
       })
-      // .finally(()=>)
   }, [refresh]);
 
 
