@@ -24,14 +24,6 @@ function Filter() {
   }, []);
 
   const dispatch = useDispatch();
-  // const setRating = (action) => {
-  //   dispatch({ type: 'ADD_FILTER_RATING', action })
-  //   setShowPlatforms(false)
-  // };
-  // const setRelease = (action) => {
-  //   dispatch({ type: 'ADD_FILTER_RELEASE', action })
-  //   setShowPlatforms(false)
-  // };
   const onDispatch = (type, action) => {
     dispatch({ type, action })
     setShowRating(false)
@@ -39,9 +31,8 @@ function Filter() {
     setShowPlatforms(false)
   };
 
-
   if ( !platformsList ) return null;
-// console.log(platformsList.results)
+
   return (
     <div className="Filter">
       <div className="Dropdown">
@@ -73,40 +64,6 @@ function Filter() {
         </div>
 
       </div>
-      {/* <div className="Dropdown">
-        <button
-          className="Dropdown-Btn Dropdown-Btn_Release"
-          type="button"
-          onClick={()=>setShowRelease(true)}
-        >
-          <div className="Btn-Content">
-            <div className="Btn-Title">
-              Sort by Release date
-            </div>
-            <img src="./arrow.svg" alt="Arrow" className="Btn-Arrow" />
-          </div>
-        </button>
-        <div
-          className="Filter-Select Filter-Select_Release"
-          style={releaseStyle}
-          onMouseLeave={()=>setShowRelease(false)}
-        >
-          {['Ascending', 'Descending'].map((item) => 
-            <FilterItem
-              key={item}
-              value={item}
-              type={'ADD_FILTER_RELEASE'}
-              onDispatch={onDispatch}
-            />  
-          )} */}
-          {/* <p className="Filter-Text">
-            Ascending
-          </p>
-          <p className="Filter-Text">
-            Descending
-          </p> */}
-        {/* </div> */}
-      {/* </div> */}
       <div className="Dropdown">
         <button
           className="Dropdown-Btn Dropdown-Btn_Platforms"

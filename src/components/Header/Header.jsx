@@ -20,6 +20,7 @@ function Header() {
           dispatch({ type: 'ADD_SEARCH_TEXT', action });
         }}
         />
+      {/* <img className="Burger" src='../burger.svg' alt='Menu' /> */}
     </div>
   )
 }

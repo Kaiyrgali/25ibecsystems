@@ -1,5 +1,6 @@
 .Aside {
   position: sticky;
+  margin-left: 40px;
   width: 200px;
   margin-top: 40px;
   &-Title {
@@ -12,4 +13,3 @@
     text-transform: capitalize;
   }
 }
-

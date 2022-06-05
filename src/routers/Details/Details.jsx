@@ -15,7 +15,7 @@ function Details() {
   const [isMore, setIsMore] = useState(true);
   const [activePicture, setPicture] = useState(0);
   const styleBtn = isMore ? null : 'block';
-  const descriptionHeight = isMore ? {WebkitLineClamp: 7} : null;
+  const descriptionHeight = isMore ? {WebkitLineClamp: 4} : null;
 
   useEffect(() => {
     fetch(gameUrl)
@@ -38,7 +38,7 @@ function Details() {
 
   console.log(!game, !screenshots)
   if (!game || !screenshots) return null;
-  // console.log(screenshots.results[activePicture].image);
+
   return (
     <div className="Details">
       <p className='PagePath'>

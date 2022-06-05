@@ -3,8 +3,6 @@ import React from 'react';
 import './FilterItem.scss';
 
 function FilterItem({ value, type, onDispatch }) {
-
-  // console.log(platform);
   return (
     <p
       className="FilterItem-Text"
