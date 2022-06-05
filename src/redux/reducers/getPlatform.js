@@ -1,4 +1,4 @@
-const getPlatform = (state = '', action) => {
+const getPlatform = (state = false, action) => {
   switch (action.type) {
     case 'ADD_FILTER_PLATFORM':
       return action.action;

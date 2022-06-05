@@ -2,15 +2,16 @@ import React from 'react';
 import BrowseListItem from '../BrowseListItem/BrowseListItem';
 import './BrowseList.scss';
 
-
 function BrowseList({ topic, data }) {
   console.log('Theme >', data)
+  // if (data === false) return null;
+
   return (
     <div>
       <div className="BrowseList-Heading">
         <h2 className="Heading-Topic">{topic}</h2>
         <span className='Heading-Count'>{data.count}</span>
-        <img src="./browselist-arrow.svg" alt="arrow" className="Heading-Arrow" />
+        <img src="./arrow.svg" alt="arrow" className="Heading-Arrow" />
       </div>
       <div className="BrowserList-Items">
         <BrowseListItem key={data.results[0].id} info={data.results[0]} />

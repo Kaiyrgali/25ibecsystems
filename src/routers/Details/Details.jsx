@@ -36,7 +36,8 @@ function Details() {
     })
   }, [refresh]);
 
-  if (!game && !screenshots) return null;
+  console.log(!game, !screenshots)
+  if (!game || !screenshots) return null;
   // console.log(screenshots.results[activePicture].image);
   return (
     <div className="Details">

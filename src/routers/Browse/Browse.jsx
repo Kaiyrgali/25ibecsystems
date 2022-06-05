@@ -34,7 +34,7 @@ function Browse() {
       .then(data => setCreators(data))
   }, []);
 
-  if (!platform && !genres && !tags && !creators) return null;
+  if (!platform || !genres || !tags || !creators) return null;
   // console.log(platform)
   return (
     <div className="Browse">
